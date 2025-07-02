@@ -16,11 +16,15 @@ async function processJobs() {
 
     try {
       const ocr = await simulateOCR(Buffer.from("image"));
+
       const db = await openDb();
       await db.run(
-        "INSERT INTO documents (id, filename, text, status) VALUES (?, ?, ?, ?)",
-        doc.id, doc.filename, ocr.text, "processed"
+        `UPDATE documents
+         SET status = ?, text = ?, confidence = ?, language = ?
+         WHERE id = ?`,
+        "processed", ocr.text, ocr.confidence, ocr.language, doc.id
       );
+
       await setStatus(`doc:status:${doc.id}`, "processed");
     } catch (err) {
       console.error("❌ Error:", err);

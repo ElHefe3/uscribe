@@ -3,6 +3,7 @@
   "packageManager": "yarn@4.9.2",
   "dependencies": {
     "express": "^5.1.0",
+    "multer": "^2.0.1",
     "redis": "^5.5.6",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
@@ -10,10 +11,13 @@
   "scripts": {
     "dev": "nodemon --watch src --exec ts-node src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "worker": "ts-node src/workers/ocr.worker.ts",
+    "init-db": "ts-node scripts/init-db.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
     "@types/node": "^24.0.9",
     "@types/redis": "^4.0.11",
     "nodemon": "^3.1.10",
