@@ -5,3 +5,5 @@
 .env
 /uploads
 /data
+
+dump.rdb
