@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Uscribe API",
+    "version": "1.0.0",
+    "description": "Document processing pipeline API"
+  },
+  "paths": {
+    "/documents/upload": {
+      "post": {
+        "summary": "Upload a document",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": ["file"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Document uploaded and queued"
+          },
+          "400": {
+            "description": "No file uploaded or invalid format"
+          }
+        }
+      }
+    },
+    "/documents": {
+      "get": {
+        "summary": "List all uploaded documents",
+        "responses": {
+          "200": {
+            "description": "Array of documents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents/{id}": {
+      "get": {
+        "summary": "Get a specific document by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Document ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Document found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Document not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Document": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "originalname": { "type": "string" },
+          "filename": { "type": "string" },
+          "mimetype": { "type": "string" },
+          "path": { "type": "string" },
+          "status": { "type": "string" },
+          "text": { "type": "string", "nullable": true },
+          "confidence": { "type": "number", "nullable": true },
+          "language": { "type": "string", "nullable": true },
+          "createdAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}
