@@ -39,6 +39,7 @@ After the worker has connected to redis
 
 ```bash
 yarn dev
+```
 
 # 🛣️ Roadmap
 
