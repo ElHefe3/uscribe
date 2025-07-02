@@ -24,11 +24,21 @@ A minimal Express.js + TypeScript backend for document ingestion and processing 
 
 ---
 
-### 🔨 Installation
+### 🔨 Installation & Run
+
+First start redis on your machine
 
 ```bash
 yarn
 
+yarn init-db
+
+yarn worker
+```
+After the worker has connected to redis
+
+```bash
+yarn dev
 
 # 🛣️ Roadmap
 
