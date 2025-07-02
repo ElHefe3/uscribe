@@ -32,12 +32,14 @@ const RAW_RUNTIME_STATE =
           ["@types/multer", "npm:2.0.0"],\
           ["@types/node", "npm:24.0.9"],\
           ["@types/redis", "npm:4.0.11"],\
+          ["@types/swagger-ui-express", "npm:4.1.8"],\
           ["express", "npm:5.1.0"],\
           ["multer", "npm:2.0.1"],\
           ["nodemon", "npm:3.1.10"],\
           ["redis", "npm:5.5.6"],\
           ["sqlite", "npm:5.1.1"],\
           ["sqlite3", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.1.7"],\
+          ["swagger-ui-express", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.0.1"],\
           ["ts-node", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"],\
           ["uscribe", "workspace:."],\
@@ -279,6 +281,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@scarf/scarf", [\
+      ["npm:1.4.0", {\
+        "packageLocation": "./.yarn/unplugged/@scarf-scarf-npm-1.4.0-f6114c29f9/node_modules/@scarf/scarf/",\
+        "packageDependencies": [\
+          ["@scarf/scarf", "npm:1.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@tootallnate/once", [\
       ["npm:1.1.2", {\
         "packageLocation": "../../home/node/.yarn/berry/cache/@tootallnate-once-npm-1.1.2-0517220057-10c0.zip/node_modules/@tootallnate/once/",\
@@ -455,6 +466,17 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:24.0.9"],\
           ["@types/send", "npm:0.17.5"],\
           ["@types/serve-static", "npm:1.15.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/swagger-ui-express", [\
+      ["npm:4.1.8", {\
+        "packageLocation": "../../home/node/.yarn/berry/cache/@types-swagger-ui-express-npm-4.1.8-29e7e3e560-10c0.zip/node_modules/@types/swagger-ui-express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.3"],\
+          ["@types/serve-static", "npm:1.15.8"],\
+          ["@types/swagger-ui-express", "npm:4.1.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3070,6 +3092,39 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["swagger-ui-dist", [\
+      ["npm:5.26.0", {\
+        "packageLocation": "../../home/node/.yarn/berry/cache/swagger-ui-dist-npm-5.26.0-63ba7f4d6a-10c0.zip/node_modules/swagger-ui-dist/",\
+        "packageDependencies": [\
+          ["@scarf/scarf", "npm:1.4.0"],\
+          ["swagger-ui-dist", "npm:5.26.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["swagger-ui-express", [\
+      ["npm:5.0.1", {\
+        "packageLocation": "../../home/node/.yarn/berry/cache/swagger-ui-express-npm-5.0.1-a36db7d969-10c0.zip/node_modules/swagger-ui-express/",\
+        "packageDependencies": [\
+          ["swagger-ui-express", "npm:5.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/swagger-ui-express-virtual-9680b7f1ac/3/home/node/.yarn/berry/cache/swagger-ui-express-npm-5.0.1-a36db7d969-10c0.zip/node_modules/swagger-ui-express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.3"],\
+          ["express", "npm:5.1.0"],\
+          ["swagger-ui-dist", "npm:5.26.0"],\
+          ["swagger-ui-express", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.0.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/express",\
+          "express"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tar", [\
       ["npm:6.2.1", {\
         "packageLocation": "../../home/node/.yarn/berry/cache/tar-npm-6.2.1-237800bb20-10c0.zip/node_modules/tar/",\
@@ -3329,12 +3384,14 @@ const RAW_RUNTIME_STATE =
           ["@types/multer", "npm:2.0.0"],\
           ["@types/node", "npm:24.0.9"],\
           ["@types/redis", "npm:4.0.11"],\
+          ["@types/swagger-ui-express", "npm:4.1.8"],\
           ["express", "npm:5.1.0"],\
           ["multer", "npm:2.0.1"],\
           ["nodemon", "npm:3.1.10"],\
           ["redis", "npm:5.5.6"],\
           ["sqlite", "npm:5.1.1"],\
           ["sqlite3", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.1.7"],\
+          ["swagger-ui-express", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.0.1"],\
           ["ts-node", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"],\
           ["uscribe", "workspace:."],\

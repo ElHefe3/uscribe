@@ -36,3 +36,15 @@ export async function saveNewDocument(doc: NewDocument): Promise<void> {
     throw err;
   }
 }
+
+export async function getDocumentById(id: string) {
+  const db = await openDb();
+  const doc = await db.get("SELECT * FROM documents WHERE id = ?", id);
+  return doc;
+}
+
+export async function getAllDocuments() {
+  const db = await openDb();
+  return db.all("SELECT * FROM documents ORDER BY createdAt DESC");
+}
+
