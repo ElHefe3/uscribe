@@ -24,11 +24,21 @@ A minimal Express.js + TypeScript backend for document ingestion and processing 
 
 ---
 
-### 🔨 Installation
+### 🔨 Installation & Run
+
+First start redis on your machine
 
 ```bash
 yarn
 
+yarn init-db
+
+yarn worker
+```
+After the worker has connected to redis
+
+```bash
+yarn dev
 
 # 🛣️ Roadmap
 
@@ -37,7 +47,7 @@ yarn
 - [x] Simulated OCR service  
 - [x] Validation and metadata persistence in SQLite  
 - [x] Real-time status tracking via Redis  
-- [ ] File upload via multer  
+- [x] File upload via multer  
 - [ ] OCR field validation using zod  
 - [ ] Dockerized dev environment (docker-compose)  
-- [ ] Unit tests with Jest  
+- [ ] Unit tests with Jest

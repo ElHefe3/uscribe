@@ -3,3 +3,5 @@
 .vscode
 .devcontainer
 .env
+/uploads
+/data
