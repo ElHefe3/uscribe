@@ -40,7 +40,8 @@ const RAW_RUNTIME_STATE =
           ["sqlite3", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.1.7"],\
           ["ts-node", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"],\
-          ["uscribe", "workspace:."]\
+          ["uscribe", "workspace:."],\
+          ["zod", "npm:3.25.67"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3336,7 +3337,8 @@ const RAW_RUNTIME_STATE =
           ["sqlite3", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:5.1.7"],\
           ["ts-node", "virtual:333716d280eee6c30c8736fc80afcdcde05d4fb6595a4a779a9bced9529ae288f66e6e1027c8208979d708c5738a27b5afb7e5f7cc8adffd242d88b2799e304a#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"],\
-          ["uscribe", "workspace:."]\
+          ["uscribe", "workspace:."],\
+          ["zod", "npm:3.25.67"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3457,6 +3459,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../home/node/.yarn/berry/cache/yn-npm-3.1.1-8ad4259784-10c0.zip/node_modules/yn/",\
         "packageDependencies": [\
           ["yn", "npm:3.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["zod", [\
+      ["npm:3.25.67", {\
+        "packageLocation": "../../home/node/.yarn/berry/cache/zod-npm-3.25.67-5734ab93c5-10c0.zip/node_modules/zod/",\
+        "packageDependencies": [\
+          ["zod", "npm:3.25.67"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -3,7 +3,6 @@ import { openDb } from "../src/db/sqlite";
 const init = async () => {
     const db = await openDb();
 
-    await db.exec(`DROP TABLE IF EXISTS documents`);
     await db.exec(`
         CREATE TABLE IF NOT EXISTS documents (
             id TEXT PRIMARY KEY,
@@ -19,7 +18,6 @@ const init = async () => {
         );
     `);
 
-    console.log("✅ SQLite schema initialized.");
     await db.close();
 };
 
